@@ -1,0 +1,341 @@
+ <!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashbak — Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+   <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">Ashbak<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+        <i class="ph ph-sun-dim" id="themeIcon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-canvas">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-badge">Available for work</div>
+      <h1 class="hero-name">Hi, I'm <span class="accent-text">Ashbak</span><br />Web Developer</h1>
+      <p class="hero-tagline">I craft pixel-perfect, performant web experiences — from thoughtful UI design to clean, maintainable code.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary"><i class="ph ph-arrow-down"></i> View Projects</a>
+        <a href="#contact" class="btn-ghost">Let's talk <i class="ph ph-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="hero-scroll"><div class="scroll-line"></div>Scroll</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label reveal">About me</div>
+    <h2 class="section-title reveal d1">Turning ideas into<br />digital realities</h2>
+
+    <div class="about-top">
+
+      <!-- ╔══════════════════════════════════════════╗
+           ║         PHOTO SECTION                    ║
+           ║  Click the circle to upload your photo   ║
+           ║  OR set src="your-photo.jpg" in the img  ║
+           ╚══════════════════════════════════════════╝ -->
+      <div class="photo-wrap reveal" id="photoWrap">
+
+        <input type="file" id="photoUpload" accept="image/*" />
+
+        <div class="photo-circle" id="photoCircle" onclick="document.getElementById('photoUpload').click()" title="Click to upload your photo">
+
+          <!-- Set src to your photo path, e.g. src="ashbak.jpg" -->
+          <img id="profileImg" src="WhatsApp Image 2026-04-06 at 3.13.22 PM.jpeg" alt="Ashbak" />
+
+          <div class="photo-placeholder" id="photoPlaceholder">
+            <i class="ph ph-camera"></i>
+            <span>Your Photo</span>
+            <small>Click to upload</small>
+          </div>
+
+        </div>
+
+        <div class="photo-badge">Open to work</div>
+      </div>
+      <!-- END PHOTO SECTION -->
+
+      <div class="about-intro reveal d2">
+        <h3>Hi, I'm Ashbak 👋</h3>
+        <p>
+          I'm a <strong>front-end developer</strong> who loves turning ideas into interactive
+          digital experiences. I design clean interfaces, build responsive websites, and focus
+          on performance and usability.
+        </p>
+        <p>
+          Along with <strong>HTML, CSS, and JavaScript</strong>, I also use Python and SQL
+          to work with data and add backend logic when needed. I enjoy the balance between
+          <strong>design and development — where creativity meets logic</strong>.
+        </p>
+        <div class="currently">🚀 Currently: Learning · Building · Improving</div>
+        <div class="tech-grid">
+          <span class="tech-badge"><i class="ph ph-code"></i> HTML5</span>
+          <span class="tech-badge"><i class="ph ph-paint-brush"></i> CSS3</span>
+          <span class="tech-badge"><i class="ph ph-lightning"></i> JavaScript</span>
+          <span class="tech-badge"><i class="ph ph-atom"></i> React</span>
+          <span class="tech-badge"><i class="ph ph-terminal"></i> Python</span>
+          <span class="tech-badge"><i class="ph ph-database"></i> SQL</span>
+          <span class="tech-badge"><i class="ph ph-git-branch"></i> Git</span>
+          <span class="tech-badge"><i class="ph ph-figma-logo"></i> Figma</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="about-skills reveal d3">
+      <p class="skills-title">Proficiency</p>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">HTML / CSS</span><span class="skill-pct">95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">React</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">70%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">SQL</span><span class="skill-pct">78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+        </div>
+         
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="projects-header">
+      <div>
+        <div class="section-label reveal">Work</div>
+        <h2 class="section-title reveal d1">Selected projects</h2>
+      </div>
+      <a href="#" class="btn-ghost reveal d2" style="font-size:.875rem;">View all <i class="ph ph-arrow-up-right"></i></a>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card featured reveal d1">
+        <div class="project-body">
+          <p class="project-num">01 — Featured</p>
+          <h3 class="project-title">DevBoard — Developer Dashboard</h3>
+          <p class="project-desc">A real-time analytics dashboard for developers to track project metrics, GitHub activity, and deployment health — all in one clean interface.</p>
+          <div class="project-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span><span class="project-tag">Chart.js</span><span class="project-tag">REST API</span></div>
+          <div class="project-links">
+            <a href="#" class="btn-sm btn-sm-primary"><i class="ph ph-arrow-up-right"></i> Live Demo</a>
+            <a href="#" class="btn-sm btn-sm-ghost"><i class="ph ph-github-logo"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="project-visual">📊</div>
+      </div>
+      <div class="project-card reveal d2">
+        <p class="project-num">02</p>
+        <h3 class="project-title">Bloom — E-commerce Store</h3>
+        <p class="project-desc">A minimal plant e-commerce UI with cart, filter system, and smooth product animations. Fully responsive and accessible.</p>
+        <div class="project-tags"><span class="project-tag">HTML/CSS</span><span class="project-tag">Vanilla JS</span><span class="project-tag">LocalStorage</span></div>
+        <div class="project-links">
+          <a href="#" class="btn-sm btn-sm-primary"><i class="ph ph-arrow-up-right"></i> Live Demo</a>
+          <a href="#" class="btn-sm btn-sm-ghost"><i class="ph ph-github-logo"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="project-card reveal d3">
+        <p class="project-num">03</p>
+        <h3 class="project-title">Memo — Note-taking App</h3>
+        <p class="project-desc">A markdown-powered note taking app with rich-text editing, tag filtering, and cloud sync. PWA support for offline use.</p>
+        <div class="project-tags"><span class="project-tag">React</span><span class="project-tag">Firebase</span><span class="project-tag">PWA</span></div>
+        <div class="project-links">
+          <a href="#" class="btn-sm btn-sm-primary"><i class="ph ph-arrow-up-right"></i> Live Demo</a>
+          <a href="#" class="btn-sm btn-sm-ghost"><i class="ph ph-github-logo"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="project-card reveal d4">
+        <p class="project-num">04</p>
+        <h3 class="project-title">Pulse — Weather PWA</h3>
+        <p class="project-desc">A geolocation-based weather app with beautiful animated backgrounds that reflect live weather conditions. Offline-ready with service workers.</p>
+        <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag">OpenWeather API</span><span class="project-tag">CSS Animations</span></div>
+        <div class="project-links">
+          <a href="#" class="btn-sm btn-sm-primary"><i class="ph ph-arrow-up-right"></i> Live Demo</a>
+          <a href="#" class="btn-sm btn-sm-ghost"><i class="ph ph-github-logo"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label reveal">Contact</div>
+    <h2 class="section-title reveal d1">Let's build something<br />together</h2>
+    <p class="section-desc reveal d2">Have a project in mind or just want to chat? My inbox is always open.</p>
+    <div class="contact-wrapper">
+      <div class="reveal d2 contact-info">
+        <h3>Get in touch</h3>
+        <p>I'm currently available for freelance work and full-time opportunities. Feel free to reach out!</p>
+        <a href="mailto:ashbakparvesh@gmail.com" class="contact-detail"><i class="ph ph-envelope"></i> ashbakparvesh@gmail.com</a>
+        <div class="contact-detail"><i class="ph ph-map-pin"></i> Chennai, Tamil Nadu</div>
+        <div class="contact-detail"><i class="ph ph-phone"></i> +91-6374145563</div>
+        <div class="social-row">
+          <a href="#" class="social-btn" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+          <a href="https://www.linkedin.com/in/ashbakparvesh?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+          
+           
+           
+        </div>
+      </div>
+       <form id="contactForm" action="https://formspree.io/f/mojpyobq" method="POST"> 
+        <div class="form-row">
+          <div class="form-group"><label for="cname">Name</label><input type="text"   id="cname" name="name" placeholder="Your name" required /></div>
+          <div class="form-group"><label for="cemail">Email</label><input type="email" id="cemail" name="email" placeholder="you@example.com" required /></div>
+        </div>
+        <div class="form-group"><label for="csubject">Subject</label><input type="text" id="csubject" name="subject" placeholder="Project idea, collaboration…" /></div>
+        <div class="form-group"><label for="cmessage">Message</label><textarea id="cmessage" name="message" placeholder="Tell me about your project…" required></textarea></div>
+        <button type="submit" class="form-submit"><i class="ph ph-paper-plane-tilt"></i> Send message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 <span>Ashbak</span>. Crafted with care.</p>
+    <p style="color:var(--text-3);font-size:.8rem;">Chennai, Tamil Nadu 🇮🇳</p>
+  </footer>
+
+  <div class="toast" id="toast"><i class="ph ph-check-circle"></i> Message sent! I'll get back to you soon.</div>
+
+  <script>
+    /* ── Sticky nav ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 40));
+
+    /* ── Theme toggle ── */
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon   = document.getElementById('themeIcon');
+    const html        = document.documentElement;
+    const saved = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', saved);
+    themeIcon.className = saved === 'dark' ? 'ph ph-sun-dim' : 'ph ph-moon';
+    themeToggle.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      themeIcon.className = next === 'dark' ? 'ph ph-sun-dim' : 'ph ph-moon';
+      localStorage.setItem('theme', next);
+    });
+
+    /* ── Hamburger ── */
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+      document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+      hamburger.classList.remove('open'); mobileNav.classList.remove('open'); document.body.style.overflow = '';
+    }));
+
+    /* ── Active nav ── */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const updateActive = () => {
+      let current = '';
+      sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+    };
+    window.addEventListener('scroll', updateActive); updateActive();
+
+    /* ── Scroll reveal + skill bars ── */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          e.target.querySelectorAll('.skill-fill').forEach(b => b.style.width = b.dataset.width + '%');
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ── PHOTO UPLOAD (click-to-upload) ── */
+    const photoUpload  = document.getElementById('photoUpload');
+    const profileImg   = document.getElementById('profileImg');
+    const placeholder  = document.getElementById('photoPlaceholder');
+
+    // If you hard-code a src, show it immediately
+    if (profileImg.src && !profileImg.src.endsWith(window.location.href)) {
+      profileImg.style.display = 'block';
+      placeholder.style.display = 'none';
+    }
+
+    // Handle file pick
+    photoUpload.addEventListener('change', function () {
+      const file = this.files[0];
+      if (!file || !file.type.startsWith('image/')) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        profileImg.src = e.target.result;
+        profileImg.style.display = 'block';
+        placeholder.style.display = 'none';
+        // Persist in sessionStorage so it survives refresh (same tab)
+        sessionStorage.setItem('portfolioPhoto', e.target.result);
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Restore from sessionStorage on load
+    const stored = sessionStorage.getItem('portfolioPhoto');
+    if (stored) {
+      profileImg.src = stored;
+      profileImg.style.display = 'block';
+      placeholder.style.display = 'none';
+    }
+
+  
+
+    /* ── Cursor glow ── */
+    if (window.matchMedia('(hover: hover)').matches) {
+      const glow = document.createElement('div');
+      glow.style.cssText = 'position:fixed;pointer-events:none;z-index:0;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(125,249,170,.04) 0%,transparent 70%);transform:translate(-50%,-50%);transition:left .5s ease,top .5s ease;';
+      document.body.appendChild(glow);
+      document.addEventListener('mousemove', e => { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; });
+    }
+  </script>
+</body>
+</html>
